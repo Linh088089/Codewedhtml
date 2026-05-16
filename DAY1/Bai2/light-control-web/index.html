@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Điều khiển đèn IoT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="off">
+  <main class="container">
+    <h1>Điều khiển đèn IoT</h1>
+
+    <section class="lamp-section" aria-label="Khu vực bóng đèn">
+      <div id="lamp" class="lamp off" aria-hidden="true">
+        <div class="lamp-top"></div>
+        <div class="lamp-body"></div>
+        <div class="lamp-base"></div>
+      </div>
+      <p id="statusText" class="status">Đèn đang TẮT</p>
+    </section>
+
+    <section class="button-group" aria-label="Nút điều khiển đèn">
+      <button id="btnOn" type="button">BẬT ĐÈN</button>
+      <button id="btnOff" type="button">TẮT ĐÈN</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

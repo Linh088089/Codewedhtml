@@ -1,0 +1,31 @@
+body {
+background-color: lightgray;
+font-family: Arial;
+text-align: center;
+}
+#light {
+    width: 100px;
+    height: 100px;
+    background-color:black;
+    border-radius: 50%;
+    margin: 30px auto;
+}
+#light.light-on {
+    background-color: yellow;
+    box-shadow: 0 0 30px yellow;
+}
+#status {
+font-size: 22px;
+font-weight: bold;
+}
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.box {
+    width: 350px;
+    height: 550px;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 50px auto;
+}

@@ -1,0 +1,160 @@
+/* Reset cơ bản để hiển thị nhất quán trên các trình duyệt */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Biến màu cho hai trạng thái bật/tắt */
+:root {
+  --bg-off: #1e1f26;
+  --bg-on: #f7f2d2;
+  --text-off: #f2f2f2;
+  --text-on: #222;
+  --lamp-off: #9ca3af;
+  --lamp-on: #ffd54f;
+}
+
+/* Giao diện nền khi đèn tắt */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.off {
+  background-color: var(--bg-off);
+  color: var(--text-off);
+}
+
+/* Giao diện nền khi đèn bật */
+body.on {
+  background-color: var(--bg-on);
+  color: var(--text-on);
+}
+
+/* Khung chính căn giữa nội dung */
+.container {
+  width: min(92vw, 500px);
+  text-align: center;
+  padding: 24px 16px;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+}
+
+/* Khu vực hiển thị bóng đèn */
+.lamp-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+/* Tạo hình bóng đèn */
+.lamp {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: filter 0.3s ease;
+}
+
+.lamp-top {
+  width: 18px;
+  height: 16px;
+  background: #666;
+  border-radius: 4px;
+}
+
+.lamp-body {
+  width: 100px;
+  height: 110px;
+  border-radius: 50% 50% 45% 45%;
+  background: var(--lamp-off);
+  transition: background-color 0.3s ease;
+}
+
+.lamp-base {
+  width: 34px;
+  height: 18px;
+  background: #777;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Trạng thái đèn bật: vàng và phát sáng */
+.lamp.on .lamp-body {
+  background: var(--lamp-on);
+}
+
+.lamp.on {
+  filter: drop-shadow(0 0 18px rgba(255, 213, 79, 0.8));
+}
+
+/* Trạng thái đèn tắt: xám */
+.lamp.off .lamp-body {
+  background: var(--lamp-off);
+}
+
+/* Text trạng thái */
+.status {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 700;
+}
+
+/* Nhóm nút điều khiển */
+.button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+#btnOn {
+  background: #2e7d32;
+  color: white;
+}
+
+#btnOff {
+  background: #c62828;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Tối ưu hiển thị trên điện thoại nhỏ */
+@media (max-width: 480px) {
+  .lamp {
+    width: 120px;
+  }
+
+  .lamp-body {
+    width: 88px;
+    height: 98px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

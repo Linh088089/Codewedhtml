@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xe Cân Bằng IoT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-btn" href="background.html">Quay lại menu</a>
+  <button id="logoutBtn" class="logout-btn">Đăng xuất</button>
+</div>
+
+<div class="frame">
+  <h2>ESP32 Web Dashboard</h2>
+
+  <div class="status">
+    Trang thai: <b id="stateText">Dung yen</b><br>
+    Mode: <b id="modeText">STOP</b>
+  </div>
+
+  <div class="grid">
+    <div></div>
+    <button class="btn dir" data-cmd="FORWARD">&#9650;</button>
+    <div></div>
+
+    <button class="btn dir" data-cmd="LEFT">&#9664;</button>
+    <button id="stopBtn" class="btn run">RUN</button>
+    <button class="btn dir" data-cmd="RIGHT">&#9654;</button>
+
+    <div></div>
+    <button class="btn dir" data-cmd="BACKWARD">&#9660;</button>
+    <div></div>
+  </div>
+
+  <div class="data">
+    Goc nghieng: <span id="angleText">0</span>&deg;
+    <div class="bar">
+      <div class="fill" id="angleFill" style="width:0%;"></div>
+    </div>
+  </div>
+
+  <div class="data">
+    PWM: <span id="pwmText">0</span>
+    <div class="bar">
+      <div class="fill" id="pwmFill" style="width:0%;"></div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

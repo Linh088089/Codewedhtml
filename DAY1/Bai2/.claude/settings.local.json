@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"light-control-web\")",
+      "Bash(touch \"light-control-web/index.html\" \"light-control-web/style.css\" \"light-control-web/script.js\" \"light-control-web/README.md\")"
+    ]
+  }
+}

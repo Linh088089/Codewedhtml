@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bảng xem PWM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar monitor-topbar">
+  <a id="backMenuBtn" class="back-btn" href="background.html">Quay lại menu</a>
+  <button id="logoutBtn" class="logout-btn">Đăng xuất</button>
+</div>
+
+<div class="table-wrap">
+  <h2>Bảng xem PWM</h2>
+
+  <div class="table-actions">
+    <button id="clearPwmTableBtn" class="nav-btn">Xóa dữ liệu bảng</button>
+  </div>
+
+  <div class="chart-card">
+    <canvas id="pwmChart"></canvas>
+  </div>
+
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Thời gian</th>
+          <th>PWM</th>
+        </tr>
+      </thead>
+      <tbody id="pwmTableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="script.js"></script>
+</body>
+</html>

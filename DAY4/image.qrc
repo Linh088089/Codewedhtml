@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="/newPrefix">
+    <file>image/bongden.png</file>
+    <file>image/bongdenon.png</file>
+    <file>image/logo.jpg</file>
+    <file>image/Quat.png</file>
+    <file>image/Quaton.png</file>
+    <file>image/tivi.png</file>
+    <file>image/tivion.png</file>
+    <file>image/Vien.png</file>
+  </qresource>
+</RCC>

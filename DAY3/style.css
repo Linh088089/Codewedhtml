@@ -1,7 +1,7 @@
 body{
   margin:0;
   font-family:Arial, sans-serif;
-  background:#0f172a;
+  background:#ffffff;
   color:white;
   text-align:center;
 }
@@ -126,7 +126,7 @@ h2{
 .login-card{
   width:360px;
   max-width:100%;
-  background:#111827;
+  background:#ffffff;
   border-radius:16px;
   padding:20px;
   box-shadow:0 10px 40px rgba(0,0,0,0.6);
@@ -150,8 +150,8 @@ h2{
   padding:10px;
   margin-bottom:12px;
   border-radius:10px;
-  border:1px solid #334155;
-  background:#0f172a;
+  border:1px solid #ffffff;
+  background:#020000;
   color:white;
 }
 
@@ -170,6 +170,26 @@ h2{
   min-height:20px;
   margin-top:10px;
   color:#f87171;
+}
+
+.login-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 15px auto;
+  border-radius: 50%;
+  border: 3px solid #22d3ee;
+}
+
+.login-logo2 {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 15px auto;
+  border-radius: 8px;
 }
 
 .nav-btn{
